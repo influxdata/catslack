@@ -36,7 +36,7 @@ func postStdinToSlack(text string) {
 	}
 
 	// Make the post request
-	resp, err := http.Post(slackURL, "applicaion/json", bytes.NewBuffer(p))
+	resp, err := http.Post(slackURL, "application/json", bytes.NewBuffer(p))
 
 	// Make sure the URL is right!
 	if resp.StatusCode != http.StatusOK {
