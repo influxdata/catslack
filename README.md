@@ -18,5 +18,5 @@ echo "EOF"
 $ export URL="https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
 
 # Experience pleasure by using the catslack!
-$ ./myCoolTestScript.sh | catslack -url $URL
+$ ./myCoolTestScript.sh | catslack
 ```

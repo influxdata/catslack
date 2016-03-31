@@ -55,6 +55,9 @@ func init() {
 
 	// Parse all flags
 	flag.Parse()
+	if slackURL == "" {
+		slackURL = os.Getenv("URL")
+	}
 }
 
 func main() {
