@@ -8,12 +8,7 @@ This is a command line utility to post `stdin` to a configured [Incoming Webhook
 $ cat myCoolScript.sh
 #!/bin/bash
 echo "I'm going to be posted in Slack!"
-echo "EOF"
-```
 
-> NOTE: `myCoolScript.sh` needs to output 'EOF' to `stdout` to mark the end of the message.
-
-```
 # Set your Slack Incoming Webhook URL:
 $ export URL="https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
 
