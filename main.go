@@ -1,11 +1,11 @@
 package main
 
 import (
-	"bufio"
 	"bytes"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 	"os"
 )
@@ -66,20 +66,11 @@ func main() {
 	}
 
 	// Start reading `stdin`
-	scanner := bufio.NewScanner(os.Stdin)
+	bytes, err := ioutil.ReadAll(os.Stdin)
 
-	// Initialize a string to hold the output
-	var t string
-
-	// Start scanning through input
-	for scanner.Scan() {
-		if scanner.Text() != "EOF" {
-			// Add new lines coming in to the output string
-			t += fmt.Sprintf("%v\n", scanner.Text())
-		} else {
-			// If a line comes in that is just `EOF` send the text and exit
-			postStdinToSlack(t)
-			break
-		}
+	if err != nil {
+		fmt.Println("Error reading stdin")
+	} else {
+		postStdinToSlack(string(bytes))
 	}
 }
