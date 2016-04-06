@@ -66,11 +66,9 @@ func main() {
 
 	// Exit if not passed a url
 	if slackURL == "" {
-		if os.Getenv("CATSLACK_URL") == "" {
-			fmt.Println("Must pass a working Slack integration URL using the `-url` flag")
-			fmt.Println("or by setting the $CATSLACK_URL env variable.")
-			os.Exit(1)
-		}
+		fmt.Println("Must pass a working Slack integration URL using the `-url` flag")
+		fmt.Println("or by setting the $CATSLACK_URL env variable.")
+		os.Exit(1)
 	}
 
 	// Start reading `stdin`
