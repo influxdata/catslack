@@ -9,7 +9,6 @@ $ cat myCoolScript.sh
 #!/bin/bash
 echo "I'm going to be posted in Slack!"
 
-```sh
 # Set your Slack Incoming Webhook URL:
 $ export URL="https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
 
